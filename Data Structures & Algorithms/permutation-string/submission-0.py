@@ -26,3 +26,5 @@ class Solution:
         return False
 
 
+# Sliding window fixed sized.
+# ord(letter) - ord('a') is done to fit in alphabetical range from 0 to 25 in an array. (a=0, b=1, c=2,.... )
