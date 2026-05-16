@@ -1,0 +1,28 @@
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+
+        if (len(s1) > len(s2)):
+            return False
+
+        cnt_s1 = [0] * 26
+        cnt_s2 = [0] * 26
+        k = len(s1)
+
+        for i in s1:
+            cnt_s1[ord(i) - ord('a')] += 1
+        for i in range(k):
+            cnt_s2[ord(s2[i]) - ord('a')] += 1
+
+        if cnt_s1 == cnt_s2:
+            return True
+        else:
+            for j in range(k, len(s2)):
+                cnt_s2[ord(s2[j]) - ord('a')] += 1
+                cnt_s2[ord(s2[j-k]) - ord('a')] -= 1
+
+                if cnt_s2 == cnt_s1:
+                    return True
+        
+        return False
+
+
