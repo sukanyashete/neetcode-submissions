@@ -26,8 +26,3 @@ class Solution:
         return False
 
 
-# Sliding window fixed sized.
-# ord(letter) - ord('a') is done to fit in alphabetical range from 0 to 25 in an array. (a=0, b=1, c=2,.... )
-# ord(letter) : this function gives the ascii value of that letter. 
-# the opposite of this function is chr(letter). Converts the number to letter.
-# chr(num + ord('a')) : Applicable to this case will convert number in range 0-25 to its equivalent a-z.
