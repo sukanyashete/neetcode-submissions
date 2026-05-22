@@ -53,8 +53,3 @@ class Solution:
             
         # Return the substring if a valid window was found, otherwise return empty string
         return "" if ans[0] == float("inf") else s[ans[1] : ans[2] + 1]
-
-# The formed variable: This is the "brain" of the algorithm. It allows us to avoid checking the entire dictionary in every loop. We only care when a character count exactly hits the target (increment) or falls below the target (decrement).
-# The while formed == required loop: This represents the "tightening" phase. It ensures that once we find a valid window, we immediately discard unnecessary characters from the left to get the minimum possible size.
-# Time Complexity: $O(S + T)$ — Each character in $S$ is visited at most twice (once by $r$, once by $l$).
-# Space Complexity: $O(S + T)$ — To store the dict_t and window_counts.
