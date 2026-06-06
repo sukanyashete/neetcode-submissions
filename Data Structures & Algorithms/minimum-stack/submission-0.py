@@ -24,8 +24,10 @@ class MinStack:
             self.mini.pop()
             self.stack.pop()
 
+    # this is simply most recent element
     def top(self) -> int:
         return self.stack[-1]
 
+    # here it is the minimum so returning TopOfStack(TOS) of mini stack where we are maintaining array of minimum elements
     def getMin(self) -> int:
         return self.mini[-1]
