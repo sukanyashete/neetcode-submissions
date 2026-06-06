@@ -17,6 +17,9 @@ class MinStack:
                 self.mini.append(val)
 
     def pop(self) -> None:
+        # pop() will be called on non-empty stack, its guaranteed provided in the question
+        # still did one check as a surety
+        # both stacks will be of the same size so there is no need to check each separately
         if self.stack:
             self.mini.pop()
             self.stack.pop()
