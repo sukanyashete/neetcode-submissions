@@ -1,7 +1,9 @@
 class MinStack:
 
     def __init__(self):
+        # this stack to use as a normal stack
         self.stack = []
+        # this stack to maintain the minimum at each iteration/element push
         self.mini = []
 
     def push(self, val: int) -> None:
