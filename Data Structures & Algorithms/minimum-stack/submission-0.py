@@ -1,9 +1,7 @@
 class MinStack:
 
     def __init__(self):
-        # this stack to use as a normal stack
         self.stack = []
-        # this stack to maintain the minimum at each iteration/element push
         self.mini = []
 
     def push(self, val: int) -> None:
@@ -17,17 +15,12 @@ class MinStack:
                 self.mini.append(val)
 
     def pop(self) -> None:
-        # pop() will be called on non-empty stack, its guaranteed provided in the question
-        # still did one check as a surety
-        # both stacks will be of the same size so there is no need to check each separately
         if self.stack:
             self.mini.pop()
             self.stack.pop()
 
-    # this is simply most recent element
     def top(self) -> int:
         return self.stack[-1]
 
-    # here it is the minimum so returning TopOfStack(TOS) of mini stack where we are maintaining array of minimum elements
     def getMin(self) -> int:
         return self.mini[-1]
